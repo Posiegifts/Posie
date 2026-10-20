@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posie | Handmade botanical candles and home decor</title>
+  <meta name="description" content="Handmade botanical candles and unique home decor, crafted to inspire. Posie by Kriszta Boros.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M6%2010%2010%206h12l4%204v20H6z%22%20fill%3D%22%23F4D87B%22/%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2211%22%20r%3D%222.4%22%20fill%3D%22%23F3EFF8%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Home page hero: tighter top, so the candle photos are visible as soon as the page opens. */
+    .hero { padding-block: clamp(20px, 3vw, 36px) clamp(32px, 5vw, 56px); }
+    .hero h1 { max-width: 26ch; }
+    .hero-lede { max-width: 64ch; }
+    .hero-photos { margin-top: clamp(18px, 2.5vw, 28px); }
+    .hero-lede-2 { margin-top: clamp(26px, 3.5vw, 40px); max-width: 60ch; }
+    .hero-actions { margin-top: 24px; }
+    @media (min-width: 700px) {
+      .hero-photos img { aspect-ratio: 4 / 3; }
+    }
+    /* Text next to the home picture: justified, so the block looks tidy. */
+    .teaser p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+    .teaser-photo { max-width: 380px; width: 100%; margin-inline: auto; }
+    .teaser-photo img { aspect-ratio: 4 / 5; }
+  </style>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <h1>Handmade botanical candles, crafted to inspire.</h1>
+        <p class="hero-lede">Posie is a personal collection of premium handmade botanical candles and unique home decor pieces.</p>
+        <!-- Three pictures. Add your own in content.js (heroPhotos), or leave empty to show samples. -->
+        <ul class="hero-photos" id="hero-photos"></ul>
+        <p class="hero-lede hero-lede-2">Explore this personal lookbook of luxury gift ideas and seasonal masterpieces, and let these unique art pieces bring a touch of everyday luxury and inspiration.</p>
+        <div class="hero-actions">
+          <a class="btn" href="products.html">See the gifts</a>
+          <a class="btn btn-outline" href="about.html">About Posie</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-tight-top" aria-labelledby="recent-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="recent-title">Recently made</h2>
+        </div>
+        <ul class="grid" id="featured"></ul>
+        <p class="block-foot"><a class="btn btn-outline" href="products.html">See all gifts</a></p>
+        <noscript><p>This page needs JavaScript to show the gifts.</p></noscript>
+      </div>
+    </section>
+
+    <section class="block band" aria-labelledby="teaser-title">
+      <div class="wrap teaser">
+        <div>
+          <h2 id="teaser-title">Posie is my personal project, made for the joy of creation.</h2>
+          <p>Every piece I craft starts with a simple, thoughtful idea. In a world that often moves too fast, I find joy in slowing down—capturing the quiet beauty of nature and turning it into something warm and lasting. My creations are focusing on rare and intricate designs that stand out from ordinary decor.</p>
+          <p>To me, Posie is a beautiful reminder that someone is truly on your mind. That is the philosophy behind everything you see here: creating thoughtful, detailed pieces that bring a touch of comfort, light, and everyday luxury into our spaces.</p>
+          <a class="text-link" href="about.html">Read more about Posie</a>
+        </div>
+        <!-- A fixed picture. Put your photo in the images folder as home.jpg (portrait, 4:5, about 1000 x 1250 px). -->
+        <div class="teaser-photo">
+          <img src="images/home.jpg" alt="Handmade by Posie" width="1000" height="1250">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact"><div id="site-footer"></div></footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

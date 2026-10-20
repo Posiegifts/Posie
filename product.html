@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gift | Posie</title>
+  <meta name="description" content="A handmade gift from Posie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M6%2010%2010%206h12l4%204v20H6z%22%20fill%3D%22%23F4D87B%22/%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2211%22%20r%3D%222.4%22%20fill%3D%22%23F3EFF8%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Gift description on the gift page: justified, so the block looks tidy. */
+    .product p:not(.product-price):not(.note) { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  </style>
+</head>
+<body data-page="product">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <a class="back-link" href="products.html">Back to all gifts</a>
+      <div id="product-root"></div>
+      <noscript><p>This page needs JavaScript to show the gift.</p></noscript>
+    </div>
+
+    <section class="block band" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="block-head"><h2 id="more-title">More from Posie</h2></div>
+        <ul class="grid" id="more-gifts"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact"><div id="site-footer"></div></footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
