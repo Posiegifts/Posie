@@ -29,7 +29,7 @@ window.POSIE = {
 
   // Leave url as "" to hide a link. Add or remove lines as you like.
   socials: [
-    { name: "Instagram", url: "https://www.instagram.com/posie_home/", handle: "" },
+    { name: "Instagram", url: "https://www.instagram.com/posie_by_kriszta_boros/", handle: "" },
     { name: "Pinterest", url: "https://www.pinterest.com/krisztaboros_posie", handle: "" },
     { name: "YouTube",   url: "https://www.youtube.com/@krisztinaboros1760", handle: "" }
   ],
