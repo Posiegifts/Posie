@@ -270,7 +270,38 @@
 
     root.appendChild(h("div", { class: "product" }, gallery, info));
 
-    var more = C.products.filter(function (p) { return p !== product; }).slice(0, 3);
+    // "More from Posie": 2 similar products (same category / shared words in the name)
+    // + 1 recent product (rotating), so new products also show up on the old pages.
+    // Optional: if content.js has C.related["product-id"] = ["id1","id2","id3"], that list wins.
+    var more = (function () {
+      var all = C.products, out = [];
+      var common = "the and for with from your candle candles gift gifts set box jar handmade decorated collection selection".split(" ");
+      function words(p) {
+        return String(p.name || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(function (w) {
+          return w.length > 2 && common.indexOf(w) === -1;
+        });
+      }
+      function add(p) { if (p && p !== product && out.indexOf(p) === -1 && out.length < 3) out.push(p); }
+
+      var chosen = (C.related && C.related[product.id]) || [];
+      chosen.forEach(function (id) { add(all.filter(function (x) { return x.id === id; })[0]); });
+
+      var mine = words(product), cats = product.category || [];
+      var scored = all.map(function (p, i) {
+        if (p === product) return null;
+        var score = 0;
+        (p.category || []).forEach(function (c) { if (cats.indexOf(c) !== -1) score += 2; });
+        words(p).forEach(function (w) { if (mine.indexOf(w) !== -1) score += 3; });
+        return { p: p, score: score, i: i };
+      }).filter(Boolean).sort(function (a, b) { return b.score - a.score || b.i - a.i; });
+      for (var k = 0; k < scored.length && out.length < 2; k++) add(scored[k].p);
+
+      var recent = all.slice(-5).filter(function (p) { return p !== product && out.indexOf(p) === -1; });
+      if (recent.length) add(recent[all.indexOf(product) % recent.length]);
+
+      for (var j = all.length - 1; j >= 0 && out.length < 3; j--) add(all[j]);
+      return out;
+    })();
     var moreList = $("#more-gifts");
     if (moreList) fillGrid(moreList, more);
   }
