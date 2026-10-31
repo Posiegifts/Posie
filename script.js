@@ -187,9 +187,35 @@
       });
     }
 
+    // Seasonal order: gifts in season first, then gifts without a season, then gifts out of season.
+    // Windows are month/day ranges (start and end included) and may overlap. Edit them here.
+    var SEASONS = {
+      Autumn:    [[8, 15], [11, 14]],
+      Winter:    [[11, 1], [1, 6]],
+      Valentine: [[1, 7],  [2, 14]],
+      Spring:    [[2, 15], [5, 15]]
+    };
+    function seasonActive(name, now) {
+      var w = SEASONS[name];
+      if (!w) return false;
+      var d = (now.getMonth() + 1) * 100 + now.getDate();
+      var from = w[0][0] * 100 + w[0][1], to = w[1][0] * 100 + w[1][1];
+      return from <= to ? (d >= from && d <= to) : (d >= from || d <= to);
+    }
+    function seasonRank(p, now) {
+      if (!p.season) return 1;
+      return seasonActive(p.season, now) ? 0 : 2;
+    }
+    function seasonOrder(products) {
+      var now = new Date();
+      return products.map(function (p, i) { return { p: p, i: i, r: seasonRank(p, now) }; })
+        .sort(function (a, b) { return a.r - b.r || a.i - b.i; })
+        .map(function (x) { return x.p; });
+    }
+
     function show(category) {
       var chosen = category === "All" ? C.products : C.products.filter(function (p) { return groupsOf(p).indexOf(category) !== -1; });
-      fillGrid(list, chosen);
+      fillGrid(list, seasonOrder(chosen));
       Array.prototype.forEach.call(filters.querySelectorAll("button"), function (b) {
         b.setAttribute("aria-pressed", b.textContent === category ? "true" : "false");
       });
@@ -204,7 +230,7 @@
       show("All");
     } else {
       if (filters) filters.remove();
-      fillGrid(list, C.products);
+      fillGrid(list, seasonOrder(C.products));
     }
   }
 
