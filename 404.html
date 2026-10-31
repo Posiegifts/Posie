@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Makes every link and file below start from the site root, whatever address the visitor typed. -->
+  <base href="/">
+  <title>Page not found | Posie</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="404">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="page-head">
+        <h1>This page has moved on</h1>
+        <p class="page-lede">We couldn't find the page you were looking for. The gifts are still here, handmade as ever.</p>
+        <p><a class="btn" href="products.html">See all gifts</a> &nbsp; <a href="index.html">Back to the home page</a></p>
+      </div>
+    </div>
+    <div class="block"></div>
+  </main>
+
+  <footer class="site-footer" id="contact"><div id="site-footer"></div></footer>
+
+  <!--
+    Old web addresses (from the previous Posie shop) are sent to the right new page here.
+    Left: the start of the old address, in lower case, without accents.
+    Right: where it goes now. Everything else just shows the message above.
+  -->
+  <script>
+    (function () {
+      var OLD = [
+        // old categories and the old shop page -> all gifts
+        ["karacsony", "products.html"],
+        ["osz-halloween", "products.html"],
+        ["valentin-nap", "products.html"],
+        ["shop_artspec", "products.html"],
+        // old products -> their new pages
+        ["kedvenc-gyertya", "product.html?id=fur-baby-candle"],
+        ["oszi-tok-gyertya", "product.html?id=pure-white-autumn-luxury-candle"],
+        ["boo-halloween-gyertya", "product.html?id=boo-bubble"],
+        ["sutotokos-asztaldisz", "product.html?id=autumn-harvest-pumpkin-wreath"],
+        ["magyaros-asztaldisz-ajandek-csomag", "product.html?id=folklove-gift-set"],
+        ["kisbusz", "product.html?id=autumn-wanderlust-pumpkin-candle-collection"],
+        // old products that no longer exist -> home page
+        ["illatviasz-ajandekcsomag", "index.html"],
+        ["valentin-sziv-gyertya", "index.html"]
+      ];
+      var path = decodeURIComponent(window.location.pathname).replace(/^\/+/, "").toLowerCase();
+      for (var i = 0; i < OLD.length; i++) {
+        if (path.indexOf(OLD[i][0]) === 0) {
+          window.location.replace("/" + OLD[i][1]);
+          return;
+        }
+      }
+    })();
+  </script>
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+<script data-goatcounter="https://posie.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
