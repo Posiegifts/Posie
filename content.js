@@ -38,6 +38,8 @@ window.POSIE = {
   // A gift can be in several groups: in a product, write category: ["Wedding", "Centerpieces"].
   categories: ["Wedding", "Centerpieces", "Gift boxes", "Small things"],
 
+  // Optional "season" on a product: "Autumn", "Winter", "Valentine" or "Spring". Gifts in season are shown first on the Gifts page;
+  // gifts without a season stay in the middle; gifts out of season move to the end.
   // Your products. The first 3 are also shown on the home page under "Recently made".
   products: [
     {
@@ -46,6 +48,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "Large Halloween Soy Candle, infused with a luxurious J'adore perfume scent. Handcrafted with natural wax for a clean, elegant burn.",
       "price": "",
       "description": [
@@ -67,6 +70,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "Halloween Soy Jar Candle infused with a rich Black Opium perfume scent for an elegant, warm autumn vibe.",
       "price": "",
       "description": [
@@ -83,6 +87,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "Cosy and chic pumpkin soy candle, a handcrafted dessert candle with elegant mini pumpkins and gold stars. The perfect luxury autumn gift for a cozy home.",
       "price": "",
       "description": [
@@ -187,6 +192,7 @@ window.POSIE = {
       "category": [
         "Centerpieces"
       ],
+      "season": "Autumn",
       "short": "Luxury soy candle wreath. Handcrafted with elegant wax pumpkins and shimmering gold stars, it is the perfect festive autumn gift.",
       "price": "",
       "description": [
@@ -203,6 +209,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Autumn",
       "short": "The ultimate autumn pumpkin gift box. Packed with handcrafted soy candles, a ceramic pumpkin jar, and cute wax melts, it is the perfect festive autumn gift.",
       "price": "",
       "description": [
@@ -219,6 +226,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Valentine",
       "short": "Discover the Love Spell wax melts set, crafted with premium soy wax and sparkling glitter for a warm ambiance.",
       "price": "",
       "description": [
@@ -235,6 +243,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Valentine",
       "short": "Discover the Be my Valentine handmade wax melts set, crafted from premium soy wax with a touch of crimson glitter.",
       "price": "",
       "description": [
@@ -251,6 +260,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Valentine",
       "short": "The P.S. I love you handmade wax melts set blends natural soy wax with a modern, elegant design.",
       "price": "",
       "description": [
@@ -267,6 +277,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Valentine",
       "short": "Discover the Cloud Nine handmade wax melts set, combining natural soy wax with a dreamy cloud design for ultimate relaxation.",
       "price": "",
       "description": [
@@ -283,6 +294,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Valentine",
       "short": "The Sweetheart Bubble handmade candle combines eco-friendly natural wax with a stunning, modern heart design.",
       "price": "",
       "description": [
@@ -299,6 +311,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Spring",
       "short": "Bring warmth and whimsical charm to your space. The Golden Heart Bunnies candle set blends natural wax with a heartwarming, detailed artisan design.",
       "price": "",
       "description": [
@@ -315,6 +328,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Spring",
       "short": "The ultimate artisan gift for Mother’s Day. Discover the Mother’s Day Blossom handmade candle gift set, featuring natural wax tulips and a personalized candle.",
       "price": "",
       "description": [
@@ -331,6 +345,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "Embrace cozy autumn vibes. The Autumn Wanderlust handmade pumpkin candle collection features uniquely crafted soy candles decorated with decorative pumpkins.",
       "price": "",
       "description": [
@@ -395,6 +410,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "Get ready for a cozy, spooky night. The Spooky Season handmade Halloween wax melts selection brings natural soy wax ghosts and skulls to your wax warmer.",
       "price": "",
       "description": [
@@ -427,6 +443,7 @@ window.POSIE = {
       "category": [
         "Centerpieces"
       ],
+      "season": "Winter",
       "short": "Bring the magic of winter indoors. The Winter Wonderland Advent centerpiece features intricate soy wax snowflakes on a minimalist handmade tray.",
       "price": "",
       "description": [
@@ -443,6 +460,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "The perfect artisan gift for the holidays. Discover the Festive Holly & Snowflake handmade Christmas candle gift box, crafted from premium eco-friendly soy wax.",
       "price": "",
       "description": [
@@ -459,6 +477,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "Elegance inspired by winter frost. Discover the Winter Frost Snowflake handmade Christmas candle gift box, featuring a natural soy candle and artisan holder.",
       "price": "",
       "description": [
@@ -475,6 +494,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "Share peace and comfort this holiday season. Discover the Guardian Angel & Snowflake handmade Christmas candle gift box, crafted from premium natural soy wax.",
       "price": "",
       "description": [
@@ -491,6 +511,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "The perfect personalized holiday gift. Discover the Festive Holly & Maya handmade Christmas candle gift box, crafted from premium eco-friendly soy wax.",
       "price": "",
       "description": [
@@ -507,6 +528,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "Bring modern festive elegance home. The Trio of christmas trees handmade sculptural Christmas candle gift box features natural soy pines in a premium kraft presentation.",
       "price": "",
       "description": [
@@ -523,6 +545,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "Add a touch of playful mystery to your autumn evenings. The Spooky Night with Casper handmade Halloween jar candle features a cute soy wax ghost and a miniature bat.",
       "price": "",
       "description": [
@@ -539,6 +562,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "Bring classic holiday nostalgia home. Discover The Nutcracker handmade sculptural Christmas candle gift box, crafted from premium natural eco-wax.",
       "price": "",
       "description": [
@@ -555,6 +579,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "Fill your home with the scent of freshly baked holiday treats. Discover the POSIE Gingerbread handmade soy jar candle, crafted from 100% natural wax.",
       "price": "",
       "description": [
@@ -571,6 +596,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "The ultimate artisan gift for the holidays. Discover the Holiday Magic handmade Christmas candle gift box, crafted from premium soy wax.",
       "price": "",
       "description": [
@@ -587,6 +613,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "Send a message of peace and comfort. Discover the Angel Blessing & Serenade handmade Christmas candle gift box, crafted from premium eco-friendly soy wax.",
       "price": "",
       "description": [
@@ -652,6 +679,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Boo Bubble handmade Halloween candle: a black round bowl with skulls, mini pumpkins and golden BOO letters.",
       "price": "",
       "description": [
@@ -668,6 +696,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Boo Basket handmade Halloween candle: a grey scalloped bowl with skulls, mini pumpkins and golden BOO letters.",
       "price": "",
       "description": [
@@ -796,6 +825,7 @@ window.POSIE = {
       "category": [
         "Centerpieces"
       ],
+      "season": "Autumn",
       "short": "The Pumpkin Patch handmade candle bowl: a rectangular autumn candle with mini pumpkins, leaves and gold stars.",
       "price": "",
       "description": [
@@ -876,6 +906,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Spring",
       "short": "The Mother's Day handmade gift box: a textured wax heart, a small golden piece and an angel-wing sachet.",
       "price": "",
       "description": [
@@ -892,6 +923,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Spring",
       "short": "The To the Best Mom handmade candle: pink wax flowers, golden hearts and a pearl-letter MOM on a gold-rimmed jar.",
       "price": "",
       "description": [
@@ -908,6 +940,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Spring",
       "short": "The Personalized ANYA handmade candle: pink wax flowers and golden hearts with a name spelled in small letters.",
       "price": "",
       "description": [
@@ -1184,6 +1217,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Autumn",
       "short": "The Pumpkin & Tulip Wax Sachet Duo: two handmade hanging soy wax sachets with a tulip and a pumpkin patch.",
       "price": "",
       "description": [
@@ -1200,6 +1234,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Autumn",
       "short": "The Grand Autumn Splendor Gift Box: a wreath candle, a candle bowl and a soy wax sachet with white and red pumpkins.",
       "price": "",
       "description": [
@@ -1216,6 +1251,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Maple Leaf handmade soy wax sachet: a hanging maple leaf with a tiny golden heart and a burgundy ribbon.",
       "price": "",
       "description": [
@@ -1232,6 +1268,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Autumn",
       "short": "The Cozy Pumpkin Harvest Candle Box: a grey stone-style candle with pumpkins and a white lidded pumpkin candle.",
       "price": "",
       "description": [
@@ -1248,6 +1285,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Gothic Harvest handmade candle: an orange ribbed jar with a skull, a white pumpkin and mini pumpkins.",
       "price": "",
       "description": [
@@ -1264,6 +1302,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Harvest Joy handmade Halloween candle: a yellow ribbed jar with pumpkins, a jack-o-lantern and golden stars.",
       "price": "",
       "description": [
@@ -1280,6 +1319,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Golden Harvest Songbird Bowl: a handmade candle bowl with a songbird, golden leaves and mini pumpkins.",
       "price": "",
       "description": [
@@ -1296,6 +1336,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Harvest Joy Halloween Bowl: a handmade yellow candle bowl with a white pumpkin, leaves and mini pumpkins.",
       "price": "",
       "description": [
@@ -1312,6 +1353,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Gothic Harvest Bowl: a handmade orange candle bowl with a skull, a white pumpkin and mini pumpkins.",
       "price": "",
       "description": [
@@ -1328,6 +1370,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Autumn",
       "short": "The Harvest Joy Gift Set: two handmade yellow autumn candles in a kraft gift box.",
       "price": "",
       "description": [
@@ -1344,6 +1387,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Autumn",
       "short": "The Gothic Harvest Gift Box: two handmade orange Halloween candles in a kraft gift box.",
       "price": "",
       "description": [
@@ -1392,6 +1436,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The Pure White Autumn Luxury Candle: a handmade white pumpkin-shaped candle with a lid and a golden stem.",
       "price": "",
       "description": [
@@ -1408,6 +1453,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The BOO! Spooky Amber Jar Candle: a handmade soy wax candle in an amber jar with a ghost and graveyard label.",
       "price": "",
       "description": [
@@ -1424,6 +1470,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Autumn",
       "short": "The BOO! Mini Skull Wax Melts: handmade white skull-shaped wax melts in a black pouch with a ghost label.",
       "price": "",
       "description": [
@@ -1440,6 +1487,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Winter Wonderland Snow Globe Candle: a handmade snow globe-shaped candle with a Christmas tree and snowflakes.",
       "price": "",
       "description": [
@@ -1456,6 +1504,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Holiday Road Trip Snow Globe Candle: a handmade snow globe-shaped candle with a car carrying a Christmas tree.",
       "price": "",
       "description": [
@@ -1488,6 +1537,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Christmas Bloom Candle Bowl: a handmade white candle bowl with a red poinsettia flower.",
       "price": "",
       "description": [
@@ -1504,6 +1554,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Snowflake Christmas Candle Bowl: a handmade white candle bowl with a snowflake and small white snowflakes.",
       "price": "",
       "description": [
@@ -1520,6 +1571,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Cozy Gingerbread Christmas Wax Melts: handmade gingerbread man wax melts in a kraft gift box.",
       "price": "",
       "description": [
@@ -1536,6 +1588,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Baked Apple Christmas Wax Melts: handmade glittery snowman and Christmas tree wax melts in a kraft gift box.",
       "price": "",
       "description": [
@@ -1552,6 +1605,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Winter Tale Christmas Wax Melts: handmade round wax melts topped with Christmas trees, in a kraft gift box.",
       "price": "",
       "description": [
@@ -1568,6 +1622,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Palo Santo Christmas Tree Wax Melts: handmade round wax melts with green Christmas trees, in a kraft gift box.",
       "price": "",
       "description": [
@@ -1584,6 +1639,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Under the Mistletoe Christmas Wax Melts: handmade round wax melts with holly leaves and red berries, in a kraft gift box.",
       "price": "",
       "description": [
@@ -1600,6 +1656,7 @@ window.POSIE = {
       "category": [
         "Small things"
       ],
+      "season": "Winter",
       "short": "The Nutcracker Christmas Wax Melts: handmade golden gingerbread man wax melts in a kraft gift box.",
       "price": "",
       "description": [
@@ -1616,6 +1673,7 @@ window.POSIE = {
       "category": [
         "Gift boxes"
       ],
+      "season": "Winter",
       "short": "Rudolph's Winter Scented Gift Box: a handmade reindeer candle and a holly wax melt in a kraft gift box.",
       "price": "",
       "description": [
