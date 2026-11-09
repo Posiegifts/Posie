@@ -22,7 +22,8 @@ const seen = new Set();
 for (const p of products) {
   if (!p.id || seen.has(p.id)) continue;
   seen.add(p.id);
-  urls.push(`${SITE}/product.html?id=${encodeURIComponent(p.id)}`);
+  // Each gift has its own ready-made page (built by make-gift-pages.js).
+  if (fs.existsSync(`gifts/${p.id}.html`)) urls.push(`${SITE}/gifts/${encodeURIComponent(p.id)}.html`);
 }
 
 const xml =
