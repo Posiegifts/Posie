@@ -1,4 +1,4 @@
-name: Update sitemap
+name: Update sitemap and gift pages
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
     paths:
       - "content.js"
       - "*.html"
+      - "scripts/**"
+      - ".github/workflows/update-sitemap.yml"
   workflow_dispatch:
 
 permissions:
@@ -18,18 +20,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Build gift pages
+        run: node scripts/make-gift-pages.js
+
       - name: Build sitemap.xml
         run: node scripts/make-sitemap.js
 
-      - name: Commit sitemap if it changed
+      - name: Commit changes if anything changed
         run: |
-          if git diff --quiet -- sitemap.xml; then
-            echo "Sitemap is already up to date."
+          git add -A -- sitemap.xml gifts
+          if git diff --cached --quiet; then
+            echo "Sitemap and gift pages are already up to date."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add sitemap.xml
-            git commit -m "Update sitemap.xml automatically"
+            git commit -m "Update sitemap.xml and gift pages automatically"
             git push
             gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
           fi
