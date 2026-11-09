@@ -60,8 +60,9 @@
     });
   }
 
+  // Every gift has its own ready-made page in the gifts folder (built automatically on GitHub).
   function productUrl(product) {
-    return "product.html?id=" + encodeURIComponent(product.id);
+    return "gifts/" + encodeURIComponent(product.id) + ".html";
   }
 
   function card(product) {
@@ -96,7 +97,8 @@
     var links = [
       { label: "Gifts", href: "products.html", id: "gifts" },
       { label: "About", href: "about.html", id: "about" },
-      { label: "Contact", href: "#contact", id: "contact" }
+      // The full address of this page + #contact, so it also works on the gift pages.
+      { label: "Contact", href: window.location.pathname + window.location.search + "#contact", id: "contact" }
     ];
     var ul = h("ul", { class: "nav" });
     links.forEach(function (l) {
@@ -135,7 +137,7 @@
         h("h2", { text: "Where you can find me" }),
         h("p", { style: "margin-inline: auto;", text: "If you like my work, feel free to get in touch with me on social media. I'd love to hear from you." }),
         socials,
-        h("p", { class: "fine", text: "\u00a9 " + new Date().getFullYear() + " Posie by Kriszta Boros" })
+        h("p", { class: "fine", text: "© " + new Date().getFullYear() + " Posie by Kriszta Boros" })
       )
     );
   }
@@ -190,10 +192,10 @@
     // Seasonal order: gifts in season first, then gifts without a season, then gifts out of season.
     // Windows are month/day ranges (start and end included) and may overlap. Edit them here.
     var SEASONS = {
-      Autumn:    [[8, 15], [11, 14]],
-      Winter:    [[11, 1], [1, 6]],
-      Valentine: [[1, 7],  [2, 14]],
-      Spring:    [[2, 15], [5, 15]]
+      Autumn: [[8, 15], [11, 14]],
+      Winter: [[11, 1], [1, 6]],
+      Valentine: [[1, 7], [2, 14]],
+      Spring: [[2, 15], [5, 15]]
     };
     function seasonActive(name, now) {
       var w = SEASONS[name];
@@ -238,8 +240,13 @@
     var root = $("#product-root");
     if (!root) return;
 
-    var id = new URLSearchParams(window.location.search).get("id");
+    // Ready-made gift pages carry their id on the <body>; old links use product.html?id=...
+    var id = document.body.getAttribute("data-product-id") ||
+      new URLSearchParams(window.location.search).get("id");
     var product = C.products.filter(function (p) { return p.id === id; })[0];
+
+    // The ready-made page already shows the gift; it is rebuilt here so the photo buttons work.
+    root.textContent = "";
 
     if (!product) {
       document.title = "Gift not found | " + C.brand;
@@ -254,6 +261,11 @@
     }
 
     document.title = product.name + " | " + C.brand;
+
+    // On the old product.html?id=... address, tell Google that the ready-made page is the real one.
+    if (!document.querySelector('link[rel="canonical"]')) {
+      document.head.appendChild(h("link", { rel: "canonical", href: "https://posie.hu/" + productUrl(product) }));
+    }
 
     var images = imagesFor(product);
     var main = h("img", { src: images[0].src, alt: images[0].alt });
