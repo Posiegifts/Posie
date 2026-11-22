@@ -50,12 +50,12 @@ const UTVONAL = [
 const BEJEGYZESEK = [
   {
     cim: "Amit szívesen tudtam volna az elején",
-    link: "miert-irom-ezt-a-blogot.html",
+    link: "amit-szivesen-tudtam-volna-az-elejen.html",
     datum: "2026-11-22",
     temakor: "bevezeto",
     perc: 2,
     kivonat: "Miért gyűjtöttem össze a Posie gyertyamárka tapasztalatait, és mit találsz itt, ha kezdőként vágnál bele a saját kézműves vállalkozásodba.",
-    borito: "kepek/miert-irom-ezt-a-blogot.jpg",
+    borito: "kepek/amit-szivesen-tudtam-volna-az-elejen.jpg",
     cimkek: ["bemutatkozás", "Posie", "kezdőknek", "kézműves vállalkozás", "gyertyakészítés"],
     kiemelt: true
   }
