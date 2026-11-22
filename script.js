@@ -97,7 +97,7 @@
     var links = [
       { label: "Gifts", href: "products.html", id: "gifts" },
       { label: "About", href: "about.html", id: "about" },
-      { label: "Blog", href: "blog/index.html", id: "blog" },
+      { label: "Blog", href: "blog/kezmuves-tudastar.html", id: "blog" },
       // The full address of this page + #contact, so it also works on the gift pages.
       { label: "Contact", href: window.location.pathname + window.location.search + "#contact", id: "contact" }
     ];
