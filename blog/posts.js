@@ -5,7 +5,7 @@
    a témaköröket, az olvasási időt és a keresést is.
    ============================================================= */
 
-/* 1. TÉMAKÖRÖK
+/* 1. TÉMAKÖRÖK: a Bevezető és a blog 9 sorozata
    Bármikor átnevezheted, törölheted vagy bővítheted őket.
    - id: rövid azonosító ékezet és szóköz nélkül (a bejegyzéseknél erre hivatkozol)
    - nev: ez jelenik meg az oldalon
@@ -13,26 +13,31 @@
    A főoldalon csak az a témakör látszik, amelyikben már van bejegyzés,
    így nem kell "hamarosan" feliratot kiírni. */
 const TEMAKOROK = [
-  { id: "bevezeto",    nev: "Bevezető",      ikon: "ti-flower" },
-  { id: "termek",      nev: "Termék és alapanyagok", ikon: "ti-flask" },
-  { id: "gyertya",     nev: "Gyertyakészítés", ikon: "ti-candle" },
-  { id: "vallalkozas", nev: "Vállalkozás és szabályok", ikon: "ti-scale" },
-  { id: "penzugyek",   nev: "Pénzügyek",     ikon: "ti-coin" },
-  { id: "ertekesites", nev: "Értékesítés és webshop", ikon: "ti-shopping-cart" },
-  { id: "szallitas",   nev: "Csomagolás és szállítás", ikon: "ti-package" },
-  { id: "fotozas",     nev: "Fotózás",       ikon: "ti-camera" },
-  { id: "marketing",   nev: "Marketing",     ikon: "ti-speakerphone" }
+  { id: "bevezeto",    nev: "Bevezető",            ikon: "ti-flower" },
+  { id: "indulas",     nev: "1. Indulás előtt",     ikon: "ti-rocket" },
+  { id: "termek",      nev: "2. A termék",          ikon: "ti-candle" },
+  { id: "biztonsag",   nev: "3. Biztonságos termék", ikon: "ti-shield-check" },
+  { id: "hivatalos",   nev: "4. Hivatalos működés", ikon: "ti-file-certificate" },
+  { id: "marka",       nev: "5. A márka",           ikon: "ti-sparkles" },
+  { id: "ertekesites", nev: "6. Értékesítés",       ikon: "ti-shopping-bag" },
+  { id: "kiszolgalas", nev: "7. Kiszolgálás",       ikon: "ti-truck" },
+  { id: "marketing",   nev: "8. Marketing",         ikon: "ti-speakerphone" },
+  { id: "novekedes",   nev: "9. Növekedés",         ikon: "ti-trending-up" }
 ];
 
 /* 2. TANULÁSI ÚTVONAL
    A kezdőknek ajánlott sorrend. Minden lépés egy témakörre mutat.
    Csak az a lépés jelenik meg, amelyik témakörben már van bejegyzés. */
 const UTVONAL = [
-  { cim: "Termék",       temakor: "termek" },
-  { cim: "Vállalkozás",  temakor: "vallalkozas" },
-  { cim: "Értékesítés",  temakor: "ertekesites" },
-  { cim: "Szállítás",    temakor: "szallitas" },
-  { cim: "Marketing",    temakor: "marketing" }
+  { cim: "Indulás előtt",      temakor: "indulas" },
+  { cim: "A termék",           temakor: "termek" },
+  { cim: "Biztonságos termék", temakor: "biztonsag" },
+  { cim: "Hivatalos működés",  temakor: "hivatalos" },
+  { cim: "A márka",            temakor: "marka" },
+  { cim: "Értékesítés",        temakor: "ertekesites" },
+  { cim: "Kiszolgálás",        temakor: "kiszolgalas" },
+  { cim: "Marketing",          temakor: "marketing" },
+  { cim: "Növekedés",          temakor: "novekedes" }
 ];
 
 /* 3. BEJEGYZÉSEK
@@ -58,6 +63,16 @@ const BEJEGYZESEK = [
     borito: "kepek/amit-szivesen-tudtam-volna-az-elejen.jpg",
     cimkek: ["bemutatkozás", "Posie", "kezdőknek", "kézműves vállalkozás", "gyertyakészítés"],
     kiemelt: true
+  },
+  {
+    cim: "Az első gyertyáim bénák voltak. Így lett belőlük vállalkozás",
+    link: "az-elso-gyertyaim-benak-voltak.html",
+    datum: "2026-11-22",
+    temakor: "bevezeto",
+    perc: 3,
+    kivonat: "Hogyan lett egy hobbiból kézműves vállalkozás, és hogyan olvasd a 9 sorozatból álló tudástárat, ha kezdőként vágsz bele.",
+    borito: "kepek/az-elso-gyertyaim-benak-voltak.jpg",
+    cimkek: ["Posie története", "hobbiból vállalkozás", "gyertyakészítés kezdőknek", "kézműves vállalkozás indítása", "sorozatok"]
   }
 ];
 
