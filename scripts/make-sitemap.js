@@ -18,6 +18,8 @@ const pages = ["", "about.html", "products.html", "craft.html"].filter(
 );
 
 const urls = pages.map((p) => `${SITE}/${p}`);
+// Blog posts: every .html file in the blog folder, except index.html (it only redirects)
+if (fs.existsSync("blog")) for (const f of fs.readdirSync("blog").sort()) if (f.endsWith(".html") && f !== "index.html") urls.push(`${SITE}/blog/${f}`);
 const seen = new Set();
 for (const p of products) {
   if (!p.id || seen.has(p.id)) continue;
