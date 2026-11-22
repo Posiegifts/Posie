@@ -69,10 +69,10 @@ const BEJEGYZESEK = [
     link: "know-your-craft.html",
     datum: "2026-11-22",
     temakor: "bevezeto",
-    perc: 3,
-    kivonat: "Hogyan lett egy hobbiból kézműves vállalkozás, és hogyan olvasd a 9 sorozatból álló tudástárat, ha kezdőként vágsz bele.",
+    perc: 4,
+    kivonat: "Mit tanultam a szójaviaszról, a kanócokról és a tégelyekről az első gyertyáim után, és hogyan olvasd a 9 sorozatból álló tudástárat.",
     borito: "kepek/know-your-craft.jpg",
-    cimkek: ["Posie története", "hobbiból vállalkozás", "gyertyakészítés kezdőknek", "kézműves vállalkozás indítása", "sorozatok"]
+    cimkek: ["Posie története", "hobbiból vállalkozás", "gyertyakészítés kezdőknek", "kézműves vállalkozás indítása", "sorozatok", "szójaviasz", "kanóc", "tégely", "kerámiapor"]
   }
 ];
 

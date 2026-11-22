@@ -88,7 +88,7 @@
 .cikk h1 { margin: 16px 0 10px; }
 .cikk .borito { aspect-ratio: 16 / 9; margin: 24px 0 32px; }
 .cikk p { max-width: none; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-.cikk ol { padding-left: 1.4em; margin: 0 0 1.1em; }
+.cikk ol, .cikk ul { padding-left: 1.4em; margin: 0 0 1.1em; }
 .cikk li { margin-bottom: 0.35em; }
 .cikk .kovetkezo { border-top: 1px solid rgba(0, 0, 0, 0.15); margin-top: 32px; padding-top: 20px; font-style: italic; }
 
