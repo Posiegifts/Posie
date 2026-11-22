@@ -53,7 +53,7 @@ const BEJEGYZESEK = [
     link: "miert-irom-ezt-a-blogot.html",
     datum: "2026-11-22",
     temakor: "bevezeto",
-    perc: 4,
+    perc: 2,
     kivonat: "Hogyan lett a Posie gyertyamárkából egy kézműves tudástár, és mit találsz itt, ha a saját kézműves vállalkozásodba vágnál bele.",
     borito: "kepek/miert-irom-ezt-a-blogot.jpg",
     cimkek: ["bemutatkozás", "Posie", "kezdőknek"],
