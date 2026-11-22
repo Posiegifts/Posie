@@ -144,6 +144,43 @@
 
   // ---------- pages ----------
 
+  // Seasonal windows (month/day ranges, start and end included, may overlap). Edit them here.
+  var SEASONS = {
+    Autumn: [[8, 15], [11, 14]],
+    Winter: [[11, 1], [1, 6]],
+    Valentine: [[1, 7], [2, 14]],
+    Spring: [[2, 15], [5, 15]]
+  };
+  function seasonActive(name, now) {
+    var w = SEASONS[name];
+    if (!w) return false;
+    var d = (now.getMonth() + 1) * 100 + now.getDate();
+    var from = w[0][0] * 100 + w[0][1], to = w[1][0] * 100 + w[1][1];
+    return from <= to ? (d >= from && d <= to) : (d >= from || d <= to);
+  }
+
+  // Home page: 3 gifts that change every 3 days.
+  // In a season (Autumn, Winter = Christmas, Valentine, Spring) the gifts come from the active season.
+  // Otherwise (no season active) the gifts without a season are used.
+  // If there are fewer than 3 seasonal gifts, the all-year gifts are used instead.
+  var ROTATE_DAYS = 3;
+  function homePicks(products, now) {
+    var active = Object.keys(SEASONS).filter(function (name) { return seasonActive(name, now); });
+    var pool = active.length
+      ? products.filter(function (p) { return p.season && active.indexOf(p.season) !== -1; })
+      : [];
+    if (pool.length < 3) {
+      pool = products.filter(function (p) { return !p.season; });
+    }
+    if (!pool.length) pool = products;
+    // Changes every ROTATE_DAYS days, counted from the same fixed start for everyone.
+    var cycle = Math.floor(now.getTime() / 86400000 / ROTATE_DAYS);
+    var start = (cycle * 3) % pool.length;
+    var out = [];
+    for (var i = 0; i < Math.min(3, pool.length); i++) out.push(pool[(start + i) % pool.length]);
+    return out;
+  }
+
   function homePage() {
     var hp = $("#hero-photos");
     if (hp) {
@@ -154,7 +191,7 @@
     }
 
     var list = $("#featured");
-    if (list) fillGrid(list, C.products.slice(0, 3));
+    if (list) fillGrid(list, homePicks(C.products, new Date()));
 
     // Clicking the hanging tag makes it swing again.
     var flower = $(".tag-flower");
@@ -190,20 +227,7 @@
     }
 
     // Seasonal order: gifts in season first, then gifts without a season, then gifts out of season.
-    // Windows are month/day ranges (start and end included) and may overlap. Edit them here.
-    var SEASONS = {
-      Autumn: [[8, 15], [11, 14]],
-      Winter: [[11, 1], [1, 6]],
-      Valentine: [[1, 7], [2, 14]],
-      Spring: [[2, 15], [5, 15]]
-    };
-    function seasonActive(name, now) {
-      var w = SEASONS[name];
-      if (!w) return false;
-      var d = (now.getMonth() + 1) * 100 + now.getDate();
-      var from = w[0][0] * 100 + w[0][1], to = w[1][0] * 100 + w[1][1];
-      return from <= to ? (d >= from && d <= to) : (d >= from || d <= to);
-    }
+    // (SEASONS and seasonActive are defined at the top of the pages section.)
     function seasonRank(p, now) {
       if (!p.season) return 1;
       return seasonActive(p.season, now) ? 0 : 2;
