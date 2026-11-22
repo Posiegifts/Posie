@@ -84,10 +84,10 @@
 .blog-lablec .fine { font-size: 0.85rem; margin: 12px auto 0; }
 
 /* Egy bejegyzés oldala */
-.cikk { max-width: 720px; margin: 0 auto; padding: clamp(28px, 4vw, 48px) var(--gutter) 20px; }
+.cikk { max-width: 720px; margin: 0 auto; padding: clamp(28px, 4vw, 48px) var(--gutter) var(--space-block); }
 .cikk h1 { margin: 16px 0 10px; }
 .cikk .borito { aspect-ratio: 16 / 9; margin: 24px 0 32px; }
-.cikk p { max-width: none; }
+.cikk p { max-width: none; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .cikk .kovetkezo { border-top: 1px solid rgba(0, 0, 0, 0.15); margin-top: 32px; padding-top: 20px; font-style: italic; }
 
 @media (max-width: 700px) {
