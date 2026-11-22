@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kézműves vállalkozói tudástár | Posie blog</title>
+  <meta name="description" content="Kézműves vállalkozói tudástár kezdőknek: alapanyagok, szabályok, pénzügyek, webshop, csomagolás, fotózás és marketing, a Posie gyertyamárka tapasztalataiból.">
+  <meta property="og:title" content="Kézműves vállalkozói tudástár | Posie blog">
+  <meta property="og:description" content="Több év tapasztalata egy helyen, kezdő kézműves vállalkozóknak.">
+  <meta property="og:image" content="https://posie.hu/images/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Ugrás a tartalomra</a>
+<!-- FEJLÉC: ugyanaz, mint a Posie többi oldalán, csak a linkek elején ../ áll, mert a blog egy almappában van -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand brand-logo" href="../index.html" aria-label="Posie főoldal"><img src="../images/logo.png" alt="Posie"></a>
+    <p class="brand-by" style="margin: -6px 0 0; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;">by Kriszta Boros</p>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../products.html">Gifts</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="index.html" aria-current="page">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- HERO: a tudástár rövid összefoglalója -->
+  <section class="blog-hero">
+    <h1>Kézműves vállalkozói tudástár</h1>
+    <p>Több év tapasztalata egy helyen: alapanyagok, szabályok, pénzügyek, webshop, csomagolás, fotózás és marketing, a Posie kulisszái mögül. Kezdőknek írtam, hogy a saját kézműves vállalkozásod első lépései könnyebbek legyenek.</p>
+  </section>
+
+  <!-- SZÁMLÁLÓ: a posts.js-ből számolódik, csak elég bejegyzés után jelenik meg -->
+  <div class="szamlalo" id="szamlalo" hidden></div>
+
+  <!-- KEZDD ITT: a kiemelt bejegyzés -->
+  <div id="kezdd-itt"></div>
+
+  <!-- TÉMAKÖRÖK -->
+  <section class="szakasz" id="temakorok-szakasz" hidden>
+    <h2>Témakörök</h2>
+    <div class="csempek" id="csempek"></div>
+  </section>
+
+  <!-- TANULÁSI ÚTVONAL -->
+  <section class="szakasz" id="utvonal-szakasz" hidden>
+    <h2>Tanulási útvonal kezdőknek</h2>
+    <ol class="utvonal" id="utvonal"></ol>
+  </section>
+
+  <!-- BEJEGYZÉSEK, kereséssel és szűréssel -->
+  <section class="szakasz" id="bejegyzesek">
+    <h2>Bejegyzések</h2>
+    <div class="kereso-sav">
+      <label class="kereso">
+        <span class="sr-only">Keresés a tudástárban</span>
+        <i class="ti ti-search" aria-hidden="true"></i>
+        <input type="search" id="kereso" placeholder="Keresés, pl. viasz, számlázás, csomagolás" autocomplete="off">
+      </label>
+      <div class="szuro-jelzo" id="szuro-jelzo" aria-live="polite"></div>
+    </div>
+    <div class="kartyak" id="kartyak"></div>
+  </section>
+
+  <!-- HÍRLEVÉL: ide jön majd a hírlevél-szolgáltató feliratkozó linkje -->
+  <section class="hirlevel">
+      <h2>Töltsd le a témacsomagokat PDF-ben</h2>
+      <p>Iratkozz fel, és e-mailben elküldöm a tudástár letölthető, nyomtatható változatát. Szólok az új bejegyzésekről is.</p>
+      <!-- A href="#" helyére a hírlevél-szolgáltatód feliratkozó oldalának linkje kerül -->
+      <a class="btn" href="#">Feliratkozom</a>
+    </section>
+
+</main>
+
+<footer class="blog-lablec">
+  <div class="wrap">
+    <a class="text-link" href="../index.html#contact">Where you can find me</a>
+    <p class="fine">© 2026 Posie by Kriszta Boros</p>
+  </div>
+</footer>
+
+<script src="posts.js"></script>
+<script>
+/* ---------- Mintaadatok: csak akkor, ha az oldal címe végén ?minta áll ----------
+   Így megnézheted, hogyan fest majd sok bejegyzéssel. Az élő oldalt nem érinti. */
+let bejegyzesek = BEJEGYZESEK;
+if (new URLSearchParams(location.search).has("minta")) {
+  const mintaCimek = [
+    ["termek", "Milyen viaszt válassz kezdőként?"], ["termek", "Kanócok: méret, anyag, próbaégetés"],
+    ["gyertya", "Az első saját gyertyaforma elkészítése"], ["gyertya", "Díszítés szójaviasszal lépésről lépésre"],
+    ["vallalkozas", "Milyen vállalkozási formával indulj?"], ["vallalkozas", "Termékbiztonsági szabályok gyertyáknál"],
+    ["penzugyek", "Hogyan árazd be a kézműves termékeidet?"], ["ertekesites", "Webshop indítása kis költségvetésből"],
+    ["szallitas", "Törékeny termékek biztonságos csomagolása"], ["fotozas", "Termékfotó telefonnal, természetes fényben"],
+    ["marketing", "Instagram és Pinterest kézműveseknek"]
+  ];
+  bejegyzesek = BEJEGYZESEK.concat(mintaCimek.map((m, i) => ({
+    cim: m[1], link: "#", datum: "2026-12-" + String(i + 1).padStart(2, "0"), temakor: m[0],
+    perc: 5 + (i % 6), kivonat: "Mintabejegyzés, hogy lásd, hogyan fest a tudástár sok bejegyzéssel.", borito: "", cimkek: []
+  })));
+}
+
+/* ---------- Segédfüggvények ---------- */
+const temakorById = Object.fromEntries(TEMAKOROK.map(t => [t.id, t]));
+// Ékezetek nélküli, kisbetűs alak, hogy a "csomagolas" és a "csomagolás" is találjon
+const egyszerusit = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const vedett = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const datumSzoveg = d => new Date(d + "T12:00:00").toLocaleDateString("hu-HU", { year: "numeric", month: "long", day: "numeric" });
+
+// Borítókép; ha a fájl még nincs meg, a témakör ikonja jelenik meg helyette
+function borito(b) {
+  const ikon = (temakorById[b.temakor] || {}).ikon || "ti-flower";
+  const helyettes = `<div class="borito"><i class="ti ${ikon}" aria-hidden="true"></i></div>`;
+  if (!b.borito) return helyettes;
+  return `<img class="borito" src="${vedett(b.borito)}" alt="" loading="lazy"
+           onerror="this.outerHTML='${helyettes.replace(/"/g, "&quot;")}'">`;
+}
+
+/* ---------- Rendezés: legújabb elöl ---------- */
+bejegyzesek = [...bejegyzesek].sort((a, b) => b.datum.localeCompare(a.datum));
+const darabTemakoronkent = {};
+bejegyzesek.forEach(b => darabTemakoronkent[b.temakor] = (darabTemakoronkent[b.temakor] || 0) + 1);
+const hasznaltTemakorok = TEMAKOROK.filter(t => darabTemakoronkent[t.id]);
+
+/* ---------- Számláló ---------- */
+if (bejegyzesek.length >= SZAMLALO_EZTOL) {
+  const osszPerc = bejegyzesek.reduce((s, b) => s + (b.perc || 0), 0);
+  const ido = osszPerc >= 90 ? `~${Math.round(osszPerc / 60)} óra` : `${osszPerc} perc`;
+  const el = document.getElementById("szamlalo");
+  el.innerHTML = `
+    <div class="szam"><span class="felirat">bejegyzés</span><strong>${bejegyzesek.length}</strong></div>
+    <div class="szam"><span class="felirat">témakör</span><strong>${hasznaltTemakorok.length}</strong></div>
+    <div class="szam"><span class="felirat">olvasnivaló</span><strong>${ido}</strong></div>`;
+  el.hidden = false;
+}
+
+/* ---------- Kezdd itt ---------- */
+const kiemelt = bejegyzesek.find(b => b.kiemelt);
+if (kiemelt) {
+  document.getElementById("kezdd-itt").innerHTML = `
+    <a class="kezdd-itt" href="${vedett(kiemelt.link)}">
+      ${borito(kiemelt)}
+      <div class="szoveg">
+        <span class="cimke">Kezdd itt</span>
+        <h2>${vedett(kiemelt.cim)}</h2>
+        <p>${vedett(kiemelt.kivonat)}</p>
+        <span class="meta">${vedett((temakorById[kiemelt.temakor] || {}).nev || "")} · ${kiemelt.perc} perc olvasás</span>
+      </div>
+    </a>`;
+}
+
+/* ---------- Témakör-csempék (csak 2+ témakörnél van értelme) ---------- */
+let aktivTemakor = null;
+if (hasznaltTemakorok.length >= 2) {
+  document.getElementById("csempek").innerHTML = hasznaltTemakorok.map(t => `
+    <button class="csempe" data-temakor="${t.id}" aria-pressed="false">
+      <i class="ti ${t.ikon}" aria-hidden="true"></i>
+      <strong>${vedett(t.nev)}</strong>
+      <span>${darabTemakoronkent[t.id]} bejegyzés</span>
+    </button>`).join("");
+  document.getElementById("temakorok-szakasz").hidden = false;
+}
+
+/* ---------- Tanulási útvonal ---------- */
+const lepesek = UTVONAL.filter(l => darabTemakoronkent[l.temakor]);
+if (lepesek.length >= 2) {
+  document.getElementById("utvonal").innerHTML = lepesek.map((l, i) =>
+    `<li><button data-temakor="${l.temakor}"><b>${i + 1}</b>${vedett(l.cim)}</button></li>`).join("");
+  document.getElementById("utvonal-szakasz").hidden = false;
+}
+
+/* ---------- Bejegyzések listája, keresés és szűrés ---------- */
+const keresoMezo = document.getElementById("kereso");
+
+function listaz() {
+  const kifejezes = egyszerusit(keresoMezo.value.trim());
+  const talalatok = bejegyzesek.filter(b => {
+    // A "Kezdd itt" bejegyzés fent már látszik, ezért a listában csak keresésnél/szűrésnél jelenik meg
+    if (b.kiemelt && !kifejezes && !aktivTemakor) return false;
+    if (aktivTemakor && b.temakor !== aktivTemakor) return false;
+    if (!kifejezes) return true;
+    const miben = egyszerusit([b.cim, b.kivonat, (temakorById[b.temakor] || {}).nev, ...(b.cimkek || [])].join(" "));
+    return kifejezes.split(/\s+/).every(szo => miben.includes(szo));
+  });
+
+  document.getElementById("kartyak").innerHTML = talalatok.length
+    ? talalatok.map(b => `
+      <a class="kartya" href="${vedett(b.link)}">
+        ${borito(b)}
+        <div class="tartalom">
+          <span class="cimke">${vedett((temakorById[b.temakor] || {}).nev || "")}</span>
+          <h3>${vedett(b.cim)}</h3>
+          <p>${vedett(b.kivonat)}</p>
+          <span class="meta">${datumSzoveg(b.datum)} · ${b.perc} perc</span>
+        </div>
+      </a>`).join("")
+    : `<p class="ures">Erre nincs találat. Próbálj egy másik szót, vagy nézd meg az összes bejegyzést.</p>`;
+
+  const jelzo = document.getElementById("szuro-jelzo");
+  jelzo.innerHTML = aktivTemakor
+    ? `Témakör: ${vedett(temakorById[aktivTemakor].nev)} <button id="szuro-torles">Összes mutatása</button>`
+    : (kifejezes ? `${talalatok.length} találat` : "");
+  const torles = document.getElementById("szuro-torles");
+  if (torles) torles.onclick = () => szur(null);
+
+  document.querySelectorAll(".csempe").forEach(c => {
+    const aktiv = c.dataset.temakor === aktivTemakor;
+    c.classList.toggle("aktiv", aktiv);
+    c.setAttribute("aria-pressed", aktiv);
+  });
+}
+
+function szur(temakor) {
+  aktivTemakor = (temakor === aktivTemakor) ? null : temakor;
+  listaz();
+  if (aktivTemakor) document.getElementById("bejegyzesek").scrollIntoView({ behavior: "smooth" });
+}
+
+document.addEventListener("click", e => {
+  const gomb = e.target.closest("[data-temakor]");
+  if (gomb) szur(gomb.dataset.temakor);
+});
+keresoMezo.addEventListener("input", listaz);
+// Amíg csak a kiemelt bejegyzés létezik, a "Bejegyzések" rész rejtve marad
+document.getElementById("bejegyzesek").hidden = !bejegyzesek.some(b => !b.kiemelt);
+listaz();
+</script>
+</body>
+</html>
