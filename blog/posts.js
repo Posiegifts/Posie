@@ -49,14 +49,14 @@ const UTVONAL = [
    - kiemelt: true, ha ez legyen a "Kezdd itt" kártya (csak egynél legyen true) */
 const BEJEGYZESEK = [
   {
-    cim: "Miért írom ezt a blogot?",
+    cim: "Amit szívesen tudtam volna az elején",
     link: "miert-irom-ezt-a-blogot.html",
     datum: "2026-11-22",
     temakor: "bevezeto",
     perc: 2,
-    kivonat: "Hogyan lett a Posie gyertyamárkából egy kézműves tudástár, és mit találsz itt, ha a saját kézműves vállalkozásodba vágnál bele.",
+    kivonat: "Miért gyűjtöttem össze a Posie gyertyamárka tapasztalatait, és mit találsz itt, ha kezdőként vágnál bele a saját kézműves vállalkozásodba.",
     borito: "kepek/miert-irom-ezt-a-blogot.jpg",
-    cimkek: ["bemutatkozás", "Posie", "kezdőknek"],
+    cimkek: ["bemutatkozás", "Posie", "kezdőknek", "kézműves vállalkozás", "gyertyakészítés"],
     kiemelt: true
   }
 ];
