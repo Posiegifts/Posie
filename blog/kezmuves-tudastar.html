@@ -91,12 +91,12 @@
 let bejegyzesek = BEJEGYZESEK;
 if (new URLSearchParams(location.search).has("minta")) {
   const mintaCimek = [
-    ["termek", "Milyen viaszt válassz kezdőként?"], ["termek", "Kanócok: méret, anyag, próbaégetés"],
-    ["gyertya", "Az első saját gyertyaforma elkészítése"], ["gyertya", "Díszítés szójaviasszal lépésről lépésre"],
-    ["vallalkozas", "Milyen vállalkozási formával indulj?"], ["vallalkozas", "Termékbiztonsági szabályok gyertyáknál"],
-    ["penzugyek", "Hogyan árazd be a kézműves termékeidet?"], ["ertekesites", "Webshop indítása kis költségvetésből"],
-    ["szallitas", "Törékeny termékek biztonságos csomagolása"], ["fotozas", "Termékfotó telefonnal, természetes fényben"],
-    ["marketing", "Instagram és Pinterest kézműveseknek"]
+    ["indulas", "Belevágjak? Kérdések indulás előtt"], ["indulas", "Mennyi pénz kell az induláshoz?"],
+    ["termek", "Milyen viaszt válassz kezdőként?"], ["termek", "Kinek szól a terméked?"],
+    ["biztonsag", "Termékbiztonsági szabályok gyertyáknál"], ["hivatalos", "Milyen vállalkozási formával indulj?"],
+    ["marka", "Hogyan legyen felismerhető a márkád?"], ["ertekesites", "Kézműves piactér vagy saját webshop?"],
+    ["kiszolgalas", "Törékeny termékek biztonságos csomagolása"], ["marketing", "Instagram és Pinterest kézműveseknek"],
+    ["novekedes", "Hogyan lesznek visszatérő vásárlóid?"]
   ];
   bejegyzesek = BEJEGYZESEK.concat(mintaCimek.map((m, i) => ({
     cim: m[1], link: "#", datum: "2026-12-" + String(i + 1).padStart(2, "0"), temakor: m[0],
