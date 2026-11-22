@@ -6,6 +6,7 @@ on:
     paths:
       - "content.js"
       - "*.html"
+      - "blog/**"
       - "scripts/**"
       - ".github/workflows/update-sitemap.yml"
   workflow_dispatch:
