@@ -65,13 +65,13 @@ const BEJEGYZESEK = [
     kiemelt: true
   },
   {
-    cim: "Az első gyertyáim bénák voltak. Így lett belőlük vállalkozás",
-    link: "az-elso-gyertyaim-benak-voltak.html",
+    cim: "Know your craft: az első gyertyáimtól a saját vállalkozásig",
+    link: "know-your-craft.html",
     datum: "2026-11-22",
     temakor: "bevezeto",
     perc: 3,
     kivonat: "Hogyan lett egy hobbiból kézműves vállalkozás, és hogyan olvasd a 9 sorozatból álló tudástárat, ha kezdőként vágsz bele.",
-    borito: "kepek/az-elso-gyertyaim-benak-voltak.jpg",
+    borito: "kepek/know-your-craft.jpg",
     cimkek: ["Posie története", "hobbiból vállalkozás", "gyertyakészítés kezdőknek", "kézműves vállalkozás indítása", "sorozatok"]
   }
 ];
