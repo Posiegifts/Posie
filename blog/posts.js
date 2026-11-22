@@ -1,7 +1,7 @@
 /* =============================================================
    A TUDÁSTÁR ADATAI
    Ezt az egy fájlt kell szerkesztened, amikor új bejegyzést teszel fel.
-   A főoldal (index.html) mindent innen számol ki: a bejegyzések számát,
+   A főoldal (kezmuves-tudastar.html) mindent innen számol ki: a bejegyzések számát,
    a témaköröket, az olvasási időt és a keresést is.
    ============================================================= */
 
